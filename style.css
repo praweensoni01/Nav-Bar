@@ -1,0 +1,94 @@
+* {
+ padding: 0;
+ margin: 0;
+ box-sizing: border-box;
+ font-family: 'Acme', sans-serif;
+}
+
+nav {
+ height: 70px;
+ background-color: black;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ position: sticky;
+}
+
+nav img {
+ height: 50px;
+ border-radius: 7px;
+ margin-left: 10px;
+}
+
+nav .menu-btn i {
+ color: white;
+ display: none;
+ background-color: black;
+}
+
+nav ul {
+ list-style: none;
+ display: flex;
+ margin-right: 20px;
+}
+
+nav ul li a {
+ color: white;
+ text-decoration: none;
+}
+
+nav ul li {
+ margin-right: 20px;
+}
+
+nav ul li a:hover {
+ color: mediumspringgreen;
+}
+
+#click {
+ display: none;
+}
+
+@media(max-width: 700px) {
+ nav .menu-btn i {
+  color: white;
+  display: block;
+  font-size: 25px;
+  margin: 20px;
+ }
+
+ #click:checked~.menu-btn i:before {
+  content: "\f00d";
+ }
+
+ nav ul {
+  position: fixed;
+  top: 70px;
+  left: -100%;
+  background-color: #111;
+  height: 100vh;
+  width: 100%;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+ }
+
+ #click:checked~ul {
+  left: 0%;
+ }
+
+ nav ul li {
+  margin-top: 30px;
+  font-size: 20px;
+ }
+}
+.main{
+ height: 100vh;
+ color: mediumblue;
+ background-color: silver;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+/*👍 Like 👍 and Follow 😀😀..*/
